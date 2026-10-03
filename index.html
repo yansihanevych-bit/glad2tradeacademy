@@ -160,6 +160,9 @@ src="https://www.facebook.com/tr?id=1754421046291353&ev=PageView&noscript=1"
     <button type="button" class="hit" id="openForm" aria-label="Записаться на серию эфиров"
       style="left:4.1667%; top:20.3782%; width:91.6667%; height:1.3196%"></button>
 
+    <button type="button" class="hit" id="openForm3" aria-label="Подробнее о курсе — записаться"
+      style="left:20.4%; top:31.58%; width:59.2%; height:0.76%"></button>
+
     <button type="button" class="hit" id="openForm2" aria-label="Записаться на серию эфиров"
       style="left:12.5%; top:91.5773%; width:75%; height:1.3196%"></button>
   </div>
@@ -259,6 +262,7 @@ src="https://www.facebook.com/tr?id=1754421046291353&ev=PageView&noscript=1"
 
   document.getElementById('openForm').addEventListener('click', openModal);
   document.getElementById('openForm2').addEventListener('click', openModal);
+  document.getElementById('openForm3').addEventListener('click', openModal);
   document.getElementById('closeForm').addEventListener('click', closeModal);
   overlay.addEventListener('click', function(e){ if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', function(e){
