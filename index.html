@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="ru">
 <head>
 <!-- Google Tag Manager -->
@@ -8,6 +9,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PZW6DC86');</script>
 <!-- End Google Tag Manager -->
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Вебинар G2T</title>
 <style>
   :root{
@@ -153,13 +155,13 @@ src="https://www.facebook.com/tr?id=1754421046291353&ev=PageView&noscript=1"
 
 <div class="page">
   <div class="shot-wrap">
-    <img class="shot" src="landing.jpg" width="960" height="6798" alt="">
+    <img class="shot" src="landing.jpg" width="960" height="8186" alt="">
 
     <button type="button" class="hit" id="openForm" aria-label="Записаться на серию эфиров"
-      style="left:4.1667%; top:19.4127%; width:91.6667%; height:1.5888%"></button>
+      style="left:4.1667%; top:20.3782%; width:91.6667%; height:1.3196%"></button>
 
     <button type="button" class="hit" id="openForm2" aria-label="Записаться на серию эфиров"
-      style="left:12.5%; top:89.8592%; width:75%; height:1.5888%"></button>
+      style="left:12.5%; top:91.5773%; width:75%; height:1.3196%"></button>
   </div>
 </div>
 
@@ -169,7 +171,7 @@ src="https://www.facebook.com/tr?id=1754421046291353&ev=PageView&noscript=1"
       <div class="modal-head">
         <div>
           <div class="modal-title" id="modalTitle">Запись на серию эфиров</div>
-          <div class="modal-sub">22.09 · 28.09 · 03.10 · 19:00 по Кипру</div>
+          <div class="modal-sub">25.09 – 19.10 · по Кипру</div>
         </div>
         <button class="modal-close" id="closeForm" type="button" aria-label="Закрыть">✕</button>
       </div>
@@ -294,21 +296,22 @@ src="https://www.facebook.com/tr?id=1754421046291353&ev=PageView&noscript=1"
     if (!ok) return;
 
     var tgSlug = sanitizeTelegramForStartParam(tg);
-    var startParam = 'webinar0922' + (tgSlug ? ('_' + tgSlug) : '');
+    var startParam = 'webinar0925' + (tgSlug ? ('_' + tgSlug) : '');
     var botUrl = 'https://t.me/glad2trade_bot?start=' + startParam;
 
-    track('generate_lead', { form_id: 'signupForm', lead_source: 'webinar0922' });
-    try { if (window.fbq) window.fbq('track', 'Lead', { content_name: 'webinar0922' }); } catch (err) {}
+    track('generate_lead', { form_id: 'signupForm', lead_source: 'webinar0925' });
+    try { if (window.fbq) window.fbq('track', 'Lead', { content_name: 'webinar0925' }); } catch (err) {}
 
     sendToSheet({
       name: name,
       telegram: tg.charAt(0) === '@' ? tg : '@' + tg,
-      source: 'webinar0922',
+      source: 'webinar0925',
       utm_source: getParam('utm_source'),
       utm_medium: getParam('utm_medium'),
       utm_campaign: getParam('utm_campaign'),
       utm_content: getParam('utm_content'),
-      page: window.location.href
+      page: window.location.href,
+      referrer: document.referrer
     });
 
     successName.textContent = name;
